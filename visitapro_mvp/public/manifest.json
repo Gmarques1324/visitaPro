@@ -1,0 +1,10 @@
+{
+  "name": "VisitaPro - Gestão de visitas",
+  "short_name": "VisitaPro",
+  "description": "Calendário de visitas recorrentes a clientes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#172554",
+  "icons": []
+}
