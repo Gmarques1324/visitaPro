@@ -348,10 +348,22 @@ export default function Home() {
               ...oldMeta, archived: true, archivedReason: `Registo consolidado em ${seed.name}`,
               notes: oldMeta.notes || `Registo anterior consolidado em ${seed.name}`
             };
-            operations.push(async () => {
-              const { error: archiveError } = await supabase.from("clients").update({ notes: encodeClientMeta(archivedMeta) }).eq("id", duplicate.id);
-              return archiveError ? { ok: false, error: `Consolidação de ${duplicate.name}: ${archiveError.message}` } : { ok: true };
-            });
+            
+operations.push(async () => {
+  if (!supabase) {
+    return { ok: false, error: "Supabase não está configurado." };
+  }
+
+  const { error: archiveError } = await supabase
+    .from("clients")
+    .update({ notes: encodeClientMeta(archivedMeta) })
+    .eq("id", duplicate.id);
+
+  return archiveError
+    ? { ok: false, error: `Consolidação de ${duplicate.name}: ${archiveError.message}` }
+    : { ok: true };
+});
+
           }
         } else {
           operations.push(async () => {
