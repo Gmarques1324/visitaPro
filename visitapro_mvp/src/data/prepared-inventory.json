@@ -1,0 +1,1573 @@
+[
+  {
+    "name": "Trivalor Maia - Phantas",
+    "aliases": [
+      "Trivalor - Maia - Phantas",
+      "Trivalor Maia - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 5514143 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-l000-1",
+        "name": "Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-L000",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número confirmado pelo utilizador. O robô 94Q-5100 foi transferido para o Instituto Nun’Alvares."
+      }
+    ]
+  },
+  {
+    "name": "APTIV BRAGA",
+    "aliases": [
+      "APTIV - SC50",
+      "APTIV BRAGA"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: APTIV BRAGA | Código CC: 5514409 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs101-0100-k4n-0000-1",
+        "name": "APTIV - SC50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-K4N-0000",
+        "assetNumber": "6538340",
+        "active": false,
+        "notes": "Equipamento antigo, substituído pelo SC50 de série GS401-6120-6CQ-R000."
+      },
+      {
+        "id": "r-gs401-6120-6cq-r000-2",
+        "name": "APTIV BRAGA",
+        "brand": "GAUSSIAN",
+        "model": "SC 50",
+        "serialNumber": "GS401-6120-6CQ-R000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "ULS Hospital São Sebastião",
+    "aliases": [
+      "ULS ENTRE DOURO E VOUGA- HOSP. S.SEBASTIAO _ SC 50",
+      "ULS ENTRE DOURO E VOUGA- HOSP. S.SEBASTIAO SC50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: ULS ENTRE DOURO E VOUGA - HOSPITAL SÃO SEBASTIÃO | Código CC: 4613244 | N.º cliente: 1014308",
+    "robots": [
+      {
+        "id": "r-sc50-1-1",
+        "name": "SC50 1",
+        "brand": "Gausium",
+        "model": "SC 50",
+        "serialNumber": "",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número de série por confirmar; manter como equipamento distinto."
+      },
+      {
+        "id": "r-sc50-2-2",
+        "name": "SC50 2",
+        "brand": "Gausium",
+        "model": "SC 50",
+        "serialNumber": "",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número de série por confirmar; manter como equipamento distinto."
+      }
+    ]
+  },
+  {
+    "name": "Colégio Novo da Maia",
+    "aliases": [
+      "COLEGIO NOVO DA MAIA POLO 2",
+      "COLEGIO NOVO DA MAIA POLO 3"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: TRIVALOR SERVIÇOS, SA | Código CC: 4613254 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-d100-1",
+        "name": "Polo 2",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-D100",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número confirmado pelo utilizador."
+      },
+      {
+        "id": "r-gs438-6150-94q-9100-2",
+        "name": "Polo 3",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-9100",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número confirmado pelo utilizador."
+      }
+    ]
+  },
+  {
+    "name": "Hospital Universitário de Coimbra CHUC. - T380 AMR",
+    "aliases": [
+      "Hospital Universitário de Coimbra CHUC. - T380 AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: Centro Hospitalar e Universitário de Coimbra | Código CC: 4612509 | N.º cliente: 1022579",
+    "robots": [
+      {
+        "id": "r-bc012w000296ws-1",
+        "name": "Hospital Universitário de Coimbra CHUC. - T380 AMR",
+        "brand": "Tennant",
+        "model": "T380 AMR - Lítio",
+        "serialNumber": "BC012W000296WS",
+        "assetNumber": "7845975",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "BA Glass Avintes - T380 AMR",
+    "aliases": [
+      "BA Glass Avintes - T380 AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: BA GLASS PORTUGAL, SA | Código CC: 4612574 | N.º cliente: 1002947",
+    "robots": [
+      {
+        "id": "r-bc012w000340fv-1",
+        "name": "BA Glass Avintes - T380 AMR",
+        "brand": "Tennant",
+        "model": "T380 AMR - Ácido",
+        "serialNumber": "BC012W000340FV",
+        "assetNumber": "3704443",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Serra Shopping - Powerboss Scrubmaster AMR",
+    "aliases": [
+      "Serra Shopping - Powerboss Scrubmaster AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SERRA SHOPPING CENTRO COMERCIAL S.A. | Código CC: 4611205 | N.º cliente: 1028748",
+    "robots": [
+      {
+        "id": "r-bc003w002353dt-1",
+        "name": "Serra Shopping - Powerboss Scrubmaster AMR",
+        "brand": "Tennant",
+        "model": "Powerboss scrubmaster AMR",
+        "serialNumber": "BC003W002353DT",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "IPO-Porto SC 50",
+    "aliases": [
+      "IPO-Porto SC 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: INSTITUTO PORTUGUES ONCOLOGIA DO PORTO FRANCISCO GENTIL, E.P.E. | Código CC: 4612522 | N.º cliente: 1010625",
+    "robots": [
+      {
+        "id": "r-gs101-0100-u5p-k000-1",
+        "name": "IPO-Porto SC 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-U5P-K000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Iberlim Labesfal - Ed 4 - Phantas",
+    "aliases": [
+      "Iberlim Labesfal - Ed 4 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: LABESFAL- LABORATORIO ALMIRO, SA | Código CC: 4612444 | N.º cliente: 1003902",
+    "robots": [
+      {
+        "id": "r-gs408-0410-g9p-6000-1",
+        "name": "Iberlim Labesfal - Ed 4 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-G9P-6000",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Iberlim Labesfal - Ed 5 - Phantas",
+    "aliases": [
+      "Iberlim Labesfal - Ed 5 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: LABESFAL- LABORATORIO ALMIRO, SA | Código CC: 4612444 | N.º cliente: 1003902",
+    "robots": [
+      {
+        "id": "r-gs408-0410-h9p-h000-1",
+        "name": "Iberlim Labesfal - Ed 5 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-H9P-H000",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Iberlim Labesfal - Ed 2&3 - Phantas",
+    "aliases": [
+      "Iberlim Labesfal - Ed 2&3 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: LABESFAL- LABORATORIO ALMIRO, SA | Código CC: 4612444 | N.º cliente: 1003902",
+    "robots": [
+      {
+        "id": "r-gs408-0410-f9p-t000-1",
+        "name": "Iberlim Labesfal - Ed 2&3 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-F9P-T000",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Barroca - SC 50",
+    "aliases": [
+      "Barroca - SC 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SOGEVINUS BARROCA | Código CC: 4612871 | N.º cliente: 1009891",
+    "robots": [
+      {
+        "id": "r-gs101-0100-u5p-l000-1",
+        "name": "Barroca - SC 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-U5P-L000",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Liv Students Street Campus - Phantas",
+    "aliases": [
+      "Liv Students Street Campus - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, SA | Código CC: 4612867 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs408-0410-f9p-h000-1",
+        "name": "Liv Students Street Campus - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-F9P-H000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Hosp. Santo António - X4 Rovr",
+    "aliases": [
+      "Hosp. Santo António - X4 Rovr"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: Unidade Local de Saude Sto. António | Código CC: 5558053 | N.º cliente: 1605957",
+    "robots": [
+      {
+        "id": "r-x4rovr11105351-1",
+        "name": "Hosp. Santo António - X4 Rovr",
+        "brand": "Tennant",
+        "model": "X4 ROVR - Lítio",
+        "serialNumber": "X4ROVR11105351",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Hosp. Coimbra - X4 Rovr",
+    "aliases": [
+      "Hosp. Coimbra - X4 Rovr"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: CENTRO HOSPITALAR UNIVERSITÁRIO COIMBRA, E.P.E. | Código CC: 4612509 | N.º cliente: 1022579",
+    "robots": [
+      {
+        "id": "r-x4rovr11102590-1",
+        "name": "Hosp. Coimbra - X4 Rovr",
+        "brand": "Tennant",
+        "model": "X4 ROVR - Lítio",
+        "serialNumber": "X4ROVR11102590",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "NOS Norteshoping - Phantas",
+    "aliases": [
+      "NOS Norteshoping - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4613010 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-v4r-a100-1",
+        "name": "NOS Norteshoping - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-V4R-A100",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Nos Campanhã - Phantas",
+    "aliases": [
+      "Nos Campanhã - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4613012 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-3100-1",
+        "name": "Nos Campanhã - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-3100",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Office center Matosinhos - Phantas",
+    "aliases": [
+      "Office center Matosinhos - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4612874 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-u000-1",
+        "name": "Office center Matosinhos - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-U000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "PLURICOSMETICA - Sc 50",
+    "aliases": [
+      "PLURICOSMETICA - Sc 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: PLURICOSMÉTICA - COMÉRCIO DE PRODUTOS DE COSMÉTICA, LDA | Código CC: 4612520 | N.º cliente: 1107369",
+    "robots": [
+      {
+        "id": "r-gs101-0100-57n-5100-1",
+        "name": "PLURICOSMETICA - Sc 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-57N-5100",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Hosp. Santo António - Sc 50",
+    "aliases": [
+      "Hosp. Santo António - Sc 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: Unidade Local de Saude Sto. António | Código CC: 5558053 | N.º cliente: 1605957",
+    "robots": [
+      {
+        "id": "r-gs101-0100-a6p-m100-1",
+        "name": "Hosp. Santo António - Sc 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-A6P-M100",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Mercadinhos Adriano - SC 50",
+    "aliases": [
+      "Mercadinhos Adriano - SC 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: MERCADINHOS ADRIANO - SUPERMERCADOS, SA | Código CC: 4612570 | N.º cliente: 1043457",
+    "robots": [
+      {
+        "id": "r-gs401-6120-6cq-q000-1",
+        "name": "Mercadinhos Adriano - SC 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS401-6120-6CQ-Q000",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SBM - Piso 0 - Phantas",
+    "aliases": [
+      "SBM - Piso 0 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4612635 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs408-0410-h9p-l000-1",
+        "name": "SBM - Piso 0 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-H9P-L000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SBM - Piso 1 - Phantas",
+    "aliases": [
+      "SBM - Piso 1 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4612635 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs408-0410-g9p-8000-1",
+        "name": "SBM - Piso 1 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-G9P-8000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "METYIS - Phantas",
+    "aliases": [
+      "METYIS - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4612704 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-e000-1",
+        "name": "METYIS - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-E000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Critical Softw. - Co-botic 1700",
+    "aliases": [
+      "Critical Softw. - Co-botic 1700"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: CRITICAL SOFTWARE- TAVEIRO - Geral | Código CC: 4612168",
+    "robots": [
+      {
+        "id": "r-221400033-1",
+        "name": "Critical Softw. - Co-botic 1700 1",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "221400033",
+        "assetNumber": "3262594",
+        "active": false,
+        "notes": ""
+      },
+      {
+        "id": "r-213510032-2",
+        "name": "Critical Softw. - Co-botic 1700 2",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213510032",
+        "assetNumber": "6589519",
+        "active": false,
+        "notes": ""
+      },
+      {
+        "id": "r-213510028-3",
+        "name": "Critical Softw. - Co-botic 1700 3",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213510028",
+        "assetNumber": "6589545",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Critical Porto. - Co-botic 1700",
+    "aliases": [
+      "Critical Porto. - Co-botic 1700"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: CRITICAL SOFTWARE - PORTO - Geral | Código CC: 4612141",
+    "robots": [
+      {
+        "id": "r-213290294-1",
+        "name": "Critical Porto. - Co-botic 1700 1",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213290294",
+        "assetNumber": "3704708",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-213510038-2",
+        "name": "Critical Porto. - Co-botic 1700 2",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213510038",
+        "assetNumber": "6513808",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-213510180-3",
+        "name": "Critical Porto. - Co-botic 1700 3",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213510180",
+        "assetNumber": "6513811",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-213510026-4",
+        "name": "Critical Porto. - Co-botic 1700 4",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "213510026",
+        "assetNumber": "6513827",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-2240806-5",
+        "name": "Critical Porto. - Co-botic 1700 5",
+        "brand": "I-Team",
+        "model": "Co-botic 1700",
+        "serialNumber": "2240806",
+        "assetNumber": "6513821",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Birkenstock - Sc50",
+    "aliases": [
+      "Birkenstock - Sc50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: BIRKENSTOCK | Código CC: 4613053 | N.º cliente: 1017440",
+    "robots": [
+      {
+        "id": "r-gs401-6120-gcq-g000-1",
+        "name": "Birkenstock - Sc50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS401-6120-GCQ-G000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Birkenstock - Phantas",
+    "aliases": [
+      "Birkenstock - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: BIRKENSTOCK | Código CC: 4613053 | N.º cliente: 1017440",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-p000-1",
+        "name": "Birkenstock - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-P000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SOGEVINUS - CAVES KO/BU - Sc 50",
+    "aliases": [
+      "SOGEVINUS - CAVES KO/BU - Sc 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: KOPKE GROUP | Código CC: 4612492 | N.º cliente: 1009891",
+    "robots": [
+      {
+        "id": "r-gs401-6120-gcq-l000-1",
+        "name": "SOGEVINUS - CAVES KO/BU - Sc 50",
+        "brand": "Gaussian Robotics",
+        "model": "SC 50",
+        "serialNumber": "GS401-6120-GCQ-L000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "IKEA Industry - T16 AMR",
+    "aliases": [
+      "IKEA Industry - T16 AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: IKEA Industry | Código CC: 4613095",
+    "robots": [
+      {
+        "id": "r-bc016w000392nt-1",
+        "name": "IKEA Industry - T16 AMR",
+        "brand": "Tennant",
+        "model": "T16 AMR - Lítio",
+        "serialNumber": "BC016W000392NT",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Barroca - CC1",
+    "aliases": [
+      "Barroca - CC1"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: KOPKE GROUP | Código CC: 4612871 | N.º cliente: 1009891",
+    "robots": [
+      {
+        "id": "r-811115329060068-1",
+        "name": "Barroca - CC1",
+        "brand": "PUDU",
+        "model": "PUDU CC1",
+        "serialNumber": "811115329060068",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Critical Softw. - X1000",
+    "aliases": [
+      "Critical Softw. - X1000"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: CRITICAL SOFTWARE- TAVEIRO - Geral | Código CC: 4612168",
+    "robots": [
+      {
+        "id": "r-za100024122004107-1",
+        "name": "Critical Softw. - X1000 1",
+        "brand": "ZACO",
+        "model": "X1000",
+        "serialNumber": "ZA100024122004107",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-za100024122004106-2",
+        "name": "Critical Softw. - X1000 2",
+        "brand": "ZACO",
+        "model": "X1000",
+        "serialNumber": "ZA100024122004106",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "FIDELIDADE - X1000",
+    "aliases": [
+      "FIDELIDADE - X1000"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: FIDELIDADE- EDF BOAVISTA | Código CC: 4612432 | N.º cliente: 1002683",
+    "robots": [
+      {
+        "id": "r-za100024122004245-1",
+        "name": "FIDELIDADE - X1000 1",
+        "brand": "ZACO",
+        "model": "X1000",
+        "serialNumber": "ZA100024122004245",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      },
+      {
+        "id": "r-za100024122004364-2",
+        "name": "FIDELIDADE - X1000 2",
+        "brand": "ZACO",
+        "model": "X1000",
+        "serialNumber": "ZA100024122004364",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "IKEA Industry - T7 AMR",
+    "aliases": [
+      "IKEA Industry - T7 AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: IKEA Industry | Código CC: 4613095",
+    "robots": [
+      {
+        "id": "r-bc004w011286th-1",
+        "name": "IKEA Industry - T7 AMR",
+        "brand": "Tennant",
+        "model": "T7 AMR - Lítio",
+        "serialNumber": "BC004W011286TH",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "IKEA Industry - T7 Ácida",
+    "aliases": [
+      "IKEA Industry - T7 Ácida"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: IKEA Industry | Código CC: 4613095",
+    "robots": [
+      {
+        "id": "r-bc004w005194fm-1",
+        "name": "IKEA Industry - T7 Ácida",
+        "brand": "Tennant",
+        "model": "T7 AMR - Ácida",
+        "serialNumber": "BC004W005194FM",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SBM - G_0 - Phantas",
+    "aliases": [
+      "SBM - G_0 - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4613127 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs408-0410-h9p-g000-1",
+        "name": "SBM - G_0 - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-H9P-G000",
+        "assetNumber": "15055",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SBM - G_1 -Phantas",
+    "aliases": [
+      "SBM - G_1 -Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SINAL MAIS - FACILITY SERVICES, S.A | Código CC: 4613127 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs408-0410-f9p-u000-1",
+        "name": "SBM - G_1 -Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS408-0410-F9P-U000",
+        "assetNumber": "17485",
+        "active": true,
+        "notes": "Número confirmado pelo utilizador para SBM Edifício G."
+      }
+    ]
+  },
+  {
+    "name": "Longa Vida - CC1",
+    "aliases": [
+      "Longa Vida - CC1"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: LONGA VIDA - INDUSTRIAS LACTEAS, S. | Código CC: 4613134 | N.º cliente: 1009034",
+    "robots": [
+      {
+        "id": "r-888005805070054-1",
+        "name": "Longa Vida - CC1",
+        "brand": "Pudu",
+        "model": "CC1",
+        "serialNumber": "888005805070054",
+        "assetNumber": "",
+        "active": false,
+        "notes": "Equipamento assinalado como inativo na folha de origem. A mesma referência aparece associada ao Instituto Nun'Alvares; confirmar a transferência."
+      }
+    ]
+  },
+  {
+    "name": "SANITANA FAB 1",
+    "aliases": [
+      "SANITANA FAB 1"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SANITANA- FAB SANITARIOS DE ANADIA, SA | Código CC: 4613140 | N.º cliente: 1005090",
+    "robots": [
+      {
+        "id": "r-2-1",
+        "name": "SANITANA FAB 1",
+        "brand": "",
+        "model": "",
+        "serialNumber": "2",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SANITANA FAB 2",
+    "aliases": [
+      "SANITANA FAB 2"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SANITANA- FAB SANITARIOS DE ANADIA, SA | Código CC: 4613141 | N.º cliente: 1005090",
+    "robots": [
+      {
+        "id": "r-gs401-6210-dbr-8000-1",
+        "name": "SANITANA FAB 2",
+        "brand": "GAUSSIAN",
+        "model": "SC 50H",
+        "serialNumber": "GS401-6210-DBR-8000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SANITANA FAB 3",
+    "aliases": [
+      "SANITANA FAB 3"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SANITANA- FAB SANITARIOS DE ANADIA, SA | Código CC: 4613142 | N.º cliente: 1005090",
+    "robots": [
+      {
+        "id": "r-4-1",
+        "name": "SANITANA FAB 3",
+        "brand": "",
+        "model": "",
+        "serialNumber": "4",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Symington - X4 Rovr",
+    "aliases": [
+      "Symington - X4 Rovr"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SYM - QT MARCO - Geral | Código CC: 4613162 | N.º cliente: 1020332",
+    "robots": [
+      {
+        "id": "r-x4rovr11111669-1",
+        "name": "Symington - X4 Rovr",
+        "brand": "Tennant",
+        "model": "X4 ROVR - Lítio",
+        "serialNumber": "X4ROVR11111669",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Symington - PUDU CC1 Pro",
+    "aliases": [
+      "Symington - PUDU CC1 Pro"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SYM- QT ST ANTONIO - Geral | Código CC: 4613163 | N.º cliente: 1020332",
+    "robots": [
+      {
+        "id": "r-8111x5605060006-1",
+        "name": "Symington - PUDU CC1 Pro",
+        "brand": "PUDU",
+        "model": "CC1",
+        "serialNumber": "8111X5605060006",
+        "assetNumber": "",
+        "active": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Escola Secundária Augusto Gomes",
+    "aliases": [
+      "Escola Secundária Augusto Gomes"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: Escola Secundária Augusto Gomes - Phantas | Código CC: 4613143 | N.º cliente: 1003807",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-v000-1",
+        "name": "Escola Secundária Augusto Gomes",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-V000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "C. SOCIAL P.S. MAMEDE CORONADO - Phantas",
+    "aliases": [
+      "C. SOCIAL P.S. MAMEDE CORONADO - Phantas"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: C. SOCIAL P.S. MAMEDE CORONADO- ROBOTICA | Código CC: 4613190 | N.º cliente: 1028047",
+    "robots": [
+      {
+        "id": "r-gs438-6150-v4r-k000-1",
+        "name": "C. SOCIAL P.S. MAMEDE CORONADO - Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-V4R-K000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Fisola",
+    "aliases": [
+      "Fisola"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: FISOLA - FABRICA DE ISOLADORES ELÉCTRICOS, LDA | Código CC: 4613200 | N.º cliente: 1029842",
+    "robots": [
+      {
+        "id": "r-866025729060001-1",
+        "name": "Fisola",
+        "brand": "PUDU",
+        "model": "MT1",
+        "serialNumber": "866025729060001",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "AOSHENG - X1000",
+    "aliases": [
+      "AOSHENG - X1000"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: PORTUGAL AOSHENG HI TECH | Código CC: 4613166 | N.º cliente: 1624686",
+    "robots": [
+      {
+        "id": "r-za100025062001174-1",
+        "name": "AOSHENG - X1000",
+        "brand": "ZACO",
+        "model": "X1000",
+        "serialNumber": "ZA100025062001174",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "SONAE ARAUCO - T7 AMR",
+    "aliases": [
+      "SONAE ARAUCO - T7 AMR"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: Sonae Arauco | Código CC: 4612427 | N.º cliente: 1002710",
+    "robots": [
+      {
+        "id": "r-sonae-arauco-t7-amr-1",
+        "name": "SONAE ARAUCO - T7 AMR",
+        "brand": "TENNANT",
+        "model": "T7 AMR",
+        "serialNumber": "",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "COFICAB GR -Roomba Plus Combo RCF-Y1",
+    "aliases": [
+      "COFICAB GR -Roomba Plus Combo RCF-Y1"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: COFICAB - PORTUGAL | Código CC: 4613044 | N.º cliente: 1032120",
+    "robots": [
+      {
+        "id": "r-n88040d250813n100954-1",
+        "name": "COFICAB GR -Roomba Plus Combo RCF-Y1",
+        "brand": "ROOMBA",
+        "model": "Plus Combo RCF-Y1",
+        "serialNumber": "N88040D250813N100954",
+        "assetNumber": "18688",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Symington - SC 50",
+    "aliases": [
+      "Symington - SC 50"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: SYM - QT ST ANTONIO - GERAL | Código CC: 4613163 | N.º cliente: 1020332",
+    "robots": [
+      {
+        "id": "r-gs101-0100-v5p-v000-1",
+        "name": "Symington - SC 50",
+        "brand": "GAUSIUM",
+        "model": "SC 50",
+        "serialNumber": "GS101-0100-V5P-V000",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "COLEGIO NOVO DE GAIA POLO 3",
+    "aliases": [
+      "COLEGIO NOVO DE GAIA POLO 3"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: TRIVALOR SERVIÇOS, SA | Código CC: 4613255 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-v4r-b100-1",
+        "name": "COLEGIO NOVO DE GAIA POLO 3",
+        "brand": "GAUSSIUM",
+        "model": "PHANTAS",
+        "serialNumber": "GS438-6150-V4R-B100",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "COLEGIO NOVO DE GAIA POLO 2",
+    "aliases": [
+      "COLEGIO NOVO DE GAIA POLO 2"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: TRIVALOR SERVIÇOS, SA | Código CC: 4613255 | N.º cliente: 1003239",
+    "robots": [
+      {
+        "id": "r-gs438-6150-v4r-7100-1",
+        "name": "COLEGIO NOVO DE GAIA POLO 2",
+        "brand": "GAUSSIUM",
+        "model": "PHANTAS",
+        "serialNumber": "GS438-6150-V4R-7100",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Longa Vida - MT1",
+    "aliases": [
+      "Longa Vida - MT1"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: LONGA VIDA - INDUSTRIAS LACTEAS, S. | Código CC: 4613134 | N.º cliente: 1009034",
+    "robots": [
+      {
+        "id": "r-866024b05050008-1",
+        "name": "Longa Vida - MT1",
+        "brand": "Pudu",
+        "model": "Mt1",
+        "serialNumber": "866024B05050008",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN SANTA MARIA DA FEIRA",
+    "aliases": [
+      "WORTEN SANTA MARIA DA FEIRA"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613318 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-za100024012901304-1",
+        "name": "WORTEN SANTA MARIA DA FEIRA",
+        "brand": "ZAKO",
+        "model": "X1000",
+        "serialNumber": "ZA100024012901304",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN OLIVEIRA AZEIMEIS",
+    "aliases": [
+      "WORTEN OLIVEIRA AZEIMEIS"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/ LAR, SA | Código CC: 4613397 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-za100025062001144-1",
+        "name": "WORTEN OLIVEIRA AZEIMEIS",
+        "brand": "ZAKO",
+        "model": "X1000",
+        "serialNumber": "ZA100025062001144",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN GAIA JARDIM",
+    "aliases": [
+      "WORTEN GAIA JARDIM"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP. P/LAR, SA | Código CC: 4613277 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-25371023011100024-1",
+        "name": "WORTEN GAIA JARDIM",
+        "brand": "NEXARO",
+        "model": "NR1700",
+        "serialNumber": "25371023011100024",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN VILA NOVA FAMALICÃO",
+    "aliases": [
+      "WORTEN VILA NOVA FAMALICÃO"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP. P/LAR, SA | Código CC: 4613276 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-25361023013100506-1",
+        "name": "WORTEN VILA NOVA FAMALICÃO",
+        "brand": "NEXARO",
+        "model": "NR1700",
+        "serialNumber": "25361023013100506",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN BARCELOS",
+    "aliases": [
+      "WORTEN BARCELOS"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613275 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-25361023013100384-1",
+        "name": "WORTEN BARCELOS",
+        "brand": "NEXARO",
+        "model": "NR1700",
+        "serialNumber": "25361023013100384",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN VILA REAL",
+    "aliases": [
+      "WORTEN VILA REAL"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613273 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-za100024122004105-1",
+        "name": "WORTEN VILA REAL",
+        "brand": "GAUSSIUM",
+        "model": "ZAKO",
+        "serialNumber": "ZA100024122004105",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN CHAVES",
+    "aliases": [
+      "WORTEN CHAVES"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613274 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-za100024012901344-1",
+        "name": "WORTEN CHAVES",
+        "brand": "ZAKO",
+        "model": "X1000",
+        "serialNumber": "ZA100024012901344",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN MARCO CANAVESES",
+    "aliases": [
+      "WORTEN MARCO CANAVESES"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613272 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-za100024122004279-1",
+        "name": "WORTEN MARCO CANAVESES",
+        "brand": "ZAKO",
+        "model": "X1000",
+        "serialNumber": "ZA100024122004279",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "WORTEN FAFE",
+    "aliases": [
+      "WORTEN FAFE"
+    ],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: WORTEN EQUIP.P/LAR, SA | Código CC: 4613399 | N.º cliente: 1004627",
+    "robots": [
+      {
+        "id": "r-25281023013100051-1",
+        "name": "WORTEN FAFE",
+        "brand": "NEXARO",
+        "model": "NR1700",
+        "serialNumber": "25281023013100051",
+        "assetNumber": "",
+        "active": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "INSTITUTO NUN'ALVARES",
+    "aliases": [],
+    "zone": "Norte",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "notes": "Empresa: INSTITUTO EDUCATIVO PADRE AFONSO LUISIER, S.J. | Código CC: 4613250 | N.º cliente: 1005447",
+    "robots": [
+      {
+        "id": "r-gs438-6150-94q-5100-1",
+        "name": "Phantas",
+        "brand": "Gaussian Robotics",
+        "model": "Phantas",
+        "serialNumber": "GS438-6150-94Q-5100",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Número confirmado pelo utilizador; transferido do local Trivalor."
+      },
+      {
+        "id": "r-888005805070054-2",
+        "name": "CC1 Pro",
+        "brand": "Pudu",
+        "model": "CC1 Pro",
+        "serialNumber": "888005805070054",
+        "assetNumber": "",
+        "active": true,
+        "notes": "Equipamento registado na folha de robôs ativos."
+      }
+    ]
+  }
+]
