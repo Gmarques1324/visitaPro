@@ -367,9 +367,18 @@ operations.push(async () => {
           }
         } else {
           operations.push(async () => {
-            const { error: insertError } = await supabase.from("clients").insert({ ...payload, created_by: userId });
-            return insertError ? { ok: false, error: `${seed.name}: ${insertError.message}` } : { ok: true };
-          });
+  if (!supabase) {
+    return { ok: false, error: "Supabase não está configurado." };
+  }
+
+  const { error: insertError } = await supabase
+    .from("clients")
+    .insert({ ...payload, created_by: userId });
+
+  return insertError
+    ? { ok: false, error: `${seed.name}: ${insertError.message}` }
+    : { ok: true };
+});
         }
       }
 
