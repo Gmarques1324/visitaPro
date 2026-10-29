@@ -327,10 +327,20 @@ export default function Home() {
           notes: encodeClientMeta(meta)
         };
         if (chosen) {
-          operations.push(async () => {
-            const { error: updateError } = await supabase.from("clients").update(payload).eq("id", chosen.id);
-            return updateError ? { ok: false, error: `${seed.name}: ${updateError.message}` } : { ok: true };
-          });
+  operations.push(async () => {
+    if (!supabase) {
+      return { ok: false, error: "Supabase não está configurado." };
+    }
+
+    const { error: updateError } = await supabase
+      .from("clients")
+      .update(payload)
+      .eq("id", chosen.id);
+
+    return updateError
+      ? { ok: false, error: `${seed.name}: ${updateError.message}` }
+      : { ok: true };
+  });
           for (const duplicate of candidates.filter(client => client.id !== chosen.id)) {
             consumedIds.add(duplicate.id);
             const oldMeta = decodeClientMeta(duplicate.notes);
