@@ -123,6 +123,7 @@ export default function Home() {
   const [visitNotes, setVisitNotes] = useState("");
   const [scheduleClient, setScheduleClient] = useState("");
   const [scheduleDate, setScheduleDate] = useState(new Date().toISOString().slice(0, 10));
+  const [calendarMonth, setCalendarMonth] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
 
   async function loadData(uid: string) {
     if (!supabase) return;
@@ -169,6 +170,34 @@ export default function Home() {
   const weekNow = isoWeek(new Date()).week;
   const totalRobots = robotCount(clients.filter(client => !decodeClientMeta(client.notes).archived));
   const inventoryImported = activeClients.filter(client => decodeClientMeta(client.notes).importVersion === INVENTORY_VERSION).length >= preparedInventory.length;
+  const calendarEvents = useMemo(() => {
+    const events: Array<{ date: string; clientId: string; client: string; kind: "done" | "planned"; notes?: string | null }> = [];
+    for (const visit of visits) events.push({ date: visit.visit_date, clientId: visit.client_id, client: clientName(visit.client_id), kind: "done", notes: visit.notes });
+    const today = new Date(); today.setHours(12, 0, 0, 0);
+    const todayKey = today.toISOString().slice(0, 10);
+    const horizon = new Date(today.getFullYear(), today.getMonth() + 6, today.getDate(), 12);
+    for (const schedule of schedules) {
+      if (!schedule.next_due_date) continue;
+      let cursor = new Date(schedule.next_due_date + "T12:00:00");
+      let guard = 0;
+      while (cursor <= horizon && guard < 100) {
+        const date = cursor.toISOString().slice(0, 10);
+        if (date >= todayKey || date === schedule.next_due_date) events.push({ date, clientId: schedule.client_id, client: clientName(schedule.client_id), kind: "planned" });
+        cursor = nextDueDate(cursor, schedule.frequency); guard++;
+      }
+    }
+    return events;
+  }, [visits, schedules, clients]);
+  const monthStart = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), 1);
+  const monthEnd = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 0);
+  const calendarStartOffset = (monthStart.getDay() + 6) % 7;
+  const calendarCellCount = Math.ceil((calendarStartOffset + monthEnd.getDate()) / 7) * 7;
+  const calendarCells = Array.from({ length: calendarCellCount }, (_, index) => {
+    const date = new Date(monthStart.getFullYear(), monthStart.getMonth(), index - calendarStartOffset + 1, 12);
+    return { date, key: date.toISOString().slice(0, 10), inMonth: date.getMonth() === calendarMonth.getMonth() };
+  });
+  const calendarMonthTitle = calendarMonth.toLocaleDateString("pt-PT", { month: "long", year: "numeric" });
+  const calendarToday = new Date().toISOString().slice(0, 10);
 
   async function signIn(e: FormEvent) {
     e.preventDefault(); if (!supabase) return;
@@ -546,10 +575,49 @@ operations.push(async () => {
     if (error) { setMessage("Erro ao registar visita: " + error.message); return; }
     const { data } = await supabase.from("visits").select("*, profiles(display_name)").eq("client_id", selectedClient.id).order("visit_date", { ascending: false });
     if (data) setVisits(old => [...old.filter(v => v.client_id !== selectedClient.id), ...(data as Visit[])]);
-    setVisitNotes(""); setMessage("Visita adicionada ao histórico.");
+    const schedule = schedules.find(item => item.client_id === selectedClient.id);
+    if (schedule) {
+      const due = nextDueDate(new Date(visitDate + "T12:00:00"), schedule.frequency).toISOString().slice(0, 10);
+      const { data: updatedSchedule, error: scheduleError } = await supabase.from("visit_schedules").update({ last_visit_date: visitDate, next_due_date: due }).eq("id", schedule.id).select().single();
+      if (scheduleError) { setMessage("Visita registada, mas não foi possível atualizar a periodicidade: " + scheduleError.message); return; }
+      if (updatedSchedule) setSchedules(old => old.map(item => item.id === schedule.id ? updatedSchedule as Schedule : item));
+      setMessage("Visita registada. As próximas visitas foram ajustadas a partir de " + dateLabel(visitDate) + ". Próxima prevista: " + dateLabel(due) + ".");
+    } else {
+      setMessage("Visita adicionada ao histórico.");
+    }
+    setVisitNotes("");
   }
 
   return <main className="app-shell">
+    <style jsx>{`
+      .calendar-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 12px 0 16px; }
+      .calendar-toolbar strong { flex: 1; text-align: center; }
+      .calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+      .calendar-weekdays > div { text-align: center; padding: 8px 2px; font-size: 12px; color: var(--muted); font-weight: 700; }
+      .calendar-day { min-width: 0; min-height: 105px; border: 1px solid var(--border); padding: 5px; overflow: hidden; }
+      .calendar-day.outside-month { opacity: .45; background: var(--surface-soft, rgba(127,127,127,.06)); }
+      .calendar-day.today { outline: 2px solid var(--primary); outline-offset: -2px; }
+      .calendar-day-number { font-size: 12px; font-weight: 700; display: block; margin-bottom: 5px; }
+      .calendar-day-events { display: flex; flex-direction: column; gap: 3px; }
+      .calendar-event { display: flex; align-items: center; gap: 4px; min-width: 0; font-size: 10px; line-height: 1.25; border-radius: 4px; padding: 3px; }
+      .calendar-event span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .calendar-event.done { background: rgba(22, 163, 74, .12); }
+      .calendar-event.planned { background: rgba(59, 130, 246, .12); }
+      .calendar-event-dot, .legend-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #16a34a; }
+      .calendar-event.planned .calendar-event-dot, .legend-dot.planned { background: #3b82f6; }
+      .calendar-more { font-size: 10px; color: var(--muted); }
+      .calendar-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0; font-size: 12px; }
+      .calendar-legend span { display: flex; align-items: center; gap: 6px; }
+      @media (max-width: 720px) {
+        .calendar-day { min-height: 74px; padding: 3px; }
+        .calendar-day-number { font-size: 11px; }
+        .calendar-event { padding: 2px; font-size: 9px; }
+        .calendar-event-dot { width: 5px; height: 5px; flex-basis: 5px; }
+        .calendar-card { overflow-x: auto; }
+        .calendar-grid { min-width: 420px; }
+        .calendar-toolbar { flex-wrap: wrap; }
+      }
+    `}</style>
     <aside className="sidebar">
       <div className="brand"><div className="brand-mark"><CalendarDays size={22}/></div><div><strong>VisitaPro</strong><small>Gestão de visitas</small></div></div>
       <nav>
@@ -588,7 +656,7 @@ operations.push(async () => {
 
       {tab === "robots" && <section className="card"><div className="section-heading"><div><h2>Todos os robôs</h2><p>{allRobots.length} equipamentos associados a clientes, incluindo os inativos</p></div><button className="button secondary" onClick={() => setTab("clients")}><Users size={16}/> Ver clientes</button></div><div className="filters"><div className="search-box"><Search size={17}/><input placeholder="Pesquisar cliente, modelo ou número de série…" value={query} onChange={e => setQuery(e.target.value)}/></div></div><div className="client-table"><div className="robot-table-head"><span>Cliente / local</span><span>Robô</span><span>N.º de série</span><span>Estado</span></div>{allRobots.map(robot => <button className="robot-table-row" key={`${robot.clientId}-${robot.id}`} onClick={() => { const match = clients.find(c => c.id === robot.clientId); if (match) setSelectedClient(match); }}><span><strong>{robot.clientName}</strong><small>{robot.name}</small></span><span>{[robot.brand, robot.model].filter(Boolean).join(" · ") || "Modelo por preencher"}</span><span className="serial-cell">{robot.serialNumber || "Por confirmar"}</span><span><i className={robot.active ? "state-dot active" : "state-dot inactive"}/>{robot.active ? "Ativo" : "Inativo"}</span></button>)}{allRobots.length === 0 && <div className="empty-state"><Bot size={28}/><strong>Ainda não existem robôs</strong><span>Importa o cadastro preparado ou abre um cliente e adiciona o equipamento no respetivo perfil.</span><button className="button secondary" onClick={() => setTab("clients")}>Abrir clientes</button></div>}</div></section>}
 
-      {tab === "calendar" && <div className="content-grid"><section className="card"><div className="section-heading"><div><h2>Planear visitas</h2><p>Define a periodicidade de um cliente na tua agenda</p></div><RefreshCw size={19}/></div><form className="stack-form" onSubmit={addSchedule}><label>Cliente<select required value={scheduleClient} onChange={e => setScheduleClient(e.target.value)}><option value="">Selecionar cliente…</option>{activeClients.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label><label>Data da última visita realizada<input type="date" required value={scheduleDate} onChange={e => setScheduleDate(e.target.value)}/></label><label>Periodicidade<select value={frequency} onChange={e => setFrequency(e.target.value as Schedule["frequency"])}><option value="weekly">Semanal</option><option value="fortnightly">Quinzenal</option><option value="monthly">Mensal</option></select></label><button className="button primary" type="submit">Guardar na minha agenda</button></form><div className="tip-box"><strong>Como funciona</strong><p>A periodicidade semanal e quinzenal usa semanas ISO. A mensal procura o mesmo dia do mês seguinte (ou o último dia se esse dia não existir).</p></div></section><section className="card"><div className="section-heading"><div><h2>A minha agenda</h2><p>Visitas previstas por ordem de data</p></div></div>{schedules.length === 0 ? <div className="empty-state"><CalendarDays size={28}/><strong>Sem visitas planeadas</strong><span>As visitas que definires aparecerão aqui.</span></div> : <div className="visit-list">{[...schedules].sort((a, b) => (a.next_due_date || "").localeCompare(b.next_due_date || "")).map(s => <div className="visit-row" key={s.id}><div className="date-tile"><strong>{s.next_due_date ? new Date(s.next_due_date + "T12:00:00").getDate() : "—"}</strong><span>{s.next_due_date ? new Date(s.next_due_date + "T12:00:00").toLocaleDateString("pt-PT", { month: "short" }) : ""}</span></div><div className="visit-info"><strong>{clientName(s.client_id)}</strong><span>{frequencyName[s.frequency]} · {s.next_due_date ? dateLabel(s.next_due_date) : "Sem data"}</span></div><button className="icon-button" title="Marcar visita realizada hoje" onClick={() => void markVisited(s)}><Check size={18}/></button></div>)}</div>}</section></div>}
+      {tab === "calendar" && <div className="content-grid"><section className="card"><div className="section-heading"><div><h2>Planear visitas</h2><p>Define a periodicidade e gera previsões para os próximos seis meses</p></div><RefreshCw size={19}/></div><form className="stack-form" onSubmit={addSchedule}><label>Cliente<select required value={scheduleClient} onChange={e => setScheduleClient(e.target.value)}><option value="">Selecionar cliente…</option>{activeClients.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label><label>Data da última visita realizada<input type="date" required value={scheduleDate} onChange={e => setScheduleDate(e.target.value)}/></label><label>Periodicidade<select value={frequency} onChange={e => setFrequency(e.target.value as Schedule["frequency"])}><option value="weekly">Semanal</option><option value="fortnightly">Quinzenal</option><option value="monthly">Mensal</option></select></label><button className="button primary" type="submit">Guardar na minha agenda</button></form><div className="tip-box"><strong>Como funciona</strong><p>O calendário projeta as visitas até seis meses. Quando marcas uma visita como realizada, a próxima data é calculada a partir do dia real da visita, deslocando também as previsões seguintes.</p></div><div className="section-heading" style={{ marginTop: 24 }}><div><h2>A minha agenda</h2><p>Próxima visita de cada cliente</p></div></div>{schedules.length === 0 ? <div className="empty-state"><CalendarDays size={28}/><strong>Sem visitas planeadas</strong><span>As visitas que definires aparecerão aqui.</span></div> : <div className="visit-list">{[...schedules].sort((a, b) => (a.next_due_date || "").localeCompare(b.next_due_date || "")).map(s => <div className="visit-row" key={s.id}><div className="date-tile"><strong>{s.next_due_date ? new Date(s.next_due_date + "T12:00:00").getDate() : "—"}</strong><span>{s.next_due_date ? new Date(s.next_due_date + "T12:00:00").toLocaleDateString("pt-PT", { month: "short" }) : ""}</span></div><div className="visit-info"><strong>{clientName(s.client_id)}</strong><span>{frequencyName[s.frequency]} · {s.next_due_date ? dateLabel(s.next_due_date) : "Sem data"}</span></div><button className="icon-button" title="Marcar visita realizada hoje" onClick={() => void markVisited(s)}><Check size={18}/></button></div>)}</div>}</section><section className="card calendar-card"><div className="section-heading"><div><h2>Calendário de visitas</h2><p>Visitas realizadas e previstas</p></div></div><div className="calendar-toolbar"><button className="button secondary" onClick={() => setCalendarMonth(new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() - 1, 1))} aria-label="Mês anterior">‹</button><strong style={{ textTransform: "capitalize" }}>{calendarMonthTitle}</strong><button className="button secondary" onClick={() => setCalendarMonth(new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 1))} aria-label="Mês seguinte">›</button><button className="button secondary" onClick={() => setCalendarMonth(new Date(new Date().getFullYear(), new Date().getMonth(), 1))}>Hoje</button></div><div className="calendar-grid calendar-weekdays">{["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"].map(day => <div key={day}>{day}</div>)}</div><div className="calendar-grid">{calendarCells.map(cell => { const events = calendarEvents.filter(event => event.date === cell.key); return <div key={cell.key} className={`calendar-day${cell.inMonth ? "" : " outside-month"}${cell.key === calendarToday ? " today" : ""}`}><span className="calendar-day-number">{cell.date.getDate()}</span><div className="calendar-day-events">{events.slice(0, 3).map((event, index) => <div key={`${event.kind}-${event.clientId}-${index}`} className={`calendar-event ${event.kind}`} title={`${event.kind === "done" ? "Realizada" : "Prevista"}: ${event.client}${event.notes ? " · " + event.notes : ""}`}><span className="calendar-event-dot"/><span>{event.client}</span></div>)}{events.length > 3 && <span className="calendar-more">+{events.length - 3} mais</span>}</div></div>; })}</div><div className="calendar-legend"><span><i className="legend-dot done"/> Realizadas</span><span><i className="legend-dot planned"/> Previstas</span></div><div className="tip-box"><strong>Sobre os atrasos</strong><p>Se a visita estava prevista para dia 5 e só a realizares dia 12, ao marcares como realizada a próxima visita passa a contar a partir do dia 12. As previsões seguintes acompanham esse novo ciclo.</p></div></section></div>}
 
       {showAdd && <div className="modal-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) setShowAdd(false); }}><section className="modal card"><div className="modal-heading"><div><h2>Novo cliente</h2><p>O cliente fica disponível para toda a equipa.</p></div><button className="icon-button" onClick={() => setShowAdd(false)} aria-label="Fechar"><X size={19}/></button></div><form className="stack-form" onSubmit={addClient}><label>Nome do cliente ou local *<input required value={newClient.name} onChange={e => setNewClient({ ...newClient, name: e.target.value })} placeholder="Nome da empresa ou local"/></label><label>Zona *<select value={newClient.zone} onChange={e => setNewClient({ ...newClient, zone: e.target.value as ClientForm["zone"] })}><option>Norte</option><option>Sul/Ilhas</option></select></label><label>Morada<input value={newClient.address} onChange={e => setNewClient({ ...newClient, address: e.target.value })} placeholder="Rua, código postal, localidade"/></label><div className="two-fields"><label>Telefone<input value={newClient.phone} onChange={e => setNewClient({ ...newClient, phone: e.target.value })}/></label><label>Email<input type="email" value={newClient.email} onChange={e => setNewClient({ ...newClient, email: e.target.value })}/></label></div><label>Notas / dados da empresa<textarea rows={3} value={newClient.notes} onChange={e => setNewClient({ ...newClient, notes: e.target.value })} placeholder="Empresa, código CC, número de cliente ou outras notas"/></label><div className="modal-actions"><button type="button" className="button secondary" onClick={() => setShowAdd(false)}>Cancelar</button><button className="button primary"><Save size={16}/> Guardar cliente</button></div></form></section></div>}
 
